@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Personalized Tutoring</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<main>
+    <div class="hero-section" style="position: relative; width: 100%; height: auto;">
+        <div class="hero-content" style="position: relative; width: 100%; height: auto;">
+            <img src="images/main.jpg" style="width: 100%; height: auto; display: block;">
+            <p style="position: absolute; top: 0; left: 0; margin: 10px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 10px; display: none;">This text should be on the top of the image on mobile and to the right on desktop.</p>
+        </div>
+    </div>
+    
+    <style>
+    @media (max-width: 767px) {
+        .hero-content p {
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .hero-content p {
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            text-align: left;
+        }
+    }
+    </style>
+    
+
+<form class="form" id="submit-form">
+  <h3 class="form-title" id="section1"></h3>
+  <h3 style="color:#2ad79d;text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;">BOOK A FREE DEMO</h3>
+  <div class="form-group">
+    <input type="text" id="parent-name" name="parent_name" placeholder="Parent Name" required>
+  </div>
+  <div class="form-group">
+    <input type="text" id="student-name" name="student_name" placeholder="Student Name" required>
+  </div>
+  
+  <div class="form-group">
+    <style>
+      .radio-button {
+        display: inline-block;
+        margin-right: 10px; /* Space between buttons */
+        margin-bottom: 10px; /* Space between lines of buttons */
+      }
+      
+      .radio-button input[type="radio"] {
+        display: none; /* Hide the default radio button */
+      }
+      
+      .radio-button label {
+        display: block;
+        width: 45px; /* Width of the box */
+        height: 35px; /* Height of the box */
+        border: 2px solid #CCCCCC; /* Border color */
+        border-radius: 5px; /* Rounded corners */
+        text-align: center;
+        line-height: 35px; /* Center text vertically */
+        cursor: pointer;
+      }
+      
+      .radio-button input[type="radio"]:checked + label {
+        background-color: #2ad79d; /* Background color for selected */
+        color: white; /* Text color for selected */
+        border: 2px solid #2ad79d; /* Border color for selected */
+      }
+    </style>
+  
+    <label for="class">Class:</label><br>
+    <!-- Radio button for KG -->
+    <div class="radio-button">
+      <input type="radio" name="class" id="classKG" value="KG">
+      <label for="classKG">KG</label>
+    </div>
+    <!-- Radio button for class 1 -->
+    <div class="radio-button">
+      <input type="radio" name="class" id="class1" value="1">
+      <label for="class1">1</label>
+    </div>
+    <div class="radio-button">
+      <input type="radio" name="class" id="class2" value="2">
+      <label for="class2">2</label>
+    </div>
+    <div class="radio-button">
+      <input type="radio" name="class" id="class3" value="3">
+      <label for="class3">3</label>
+    </div>
+    <div class="radio-button">
+      <input type="radio" name="class" id="class4" value="4">
+      <label for="class4">4</label>
+    </div>
+    
+    <div class="radio-button">
+      <input type="radio" name="class" id="class5" value="5">
+      <label for="class5">5</label>
+    </div>
+    
+    <div class="radio-button">
+      <input type="radio" name="class" id="class6" value="6">
+      <label for="class6">6</label>
+    </div>
+    
+    <div class="radio-button">
+      <input type="radio" name="class" id="class7" value="7">
+      <label for="class7">7</label>
+    </div>
+    
+    <div class="radio-button">
+      <input type="radio" name="class" id="class8" value="8">
+      <label for="class8">8</label>
+    </div>
+    
+    <div class="radio-button">
+      <input type="radio" name="class" id="class9" value="9">
+      <label for="class9">9</label>
+    </div>
+    
+    <div class="radio-button">
+      <input type="radio" name="class" id="class10" value="10">
+      <label for="class10">10</label>
+    </div>
+    
+    <div class="radio-button">
+      <input type="radio" name="class" id="class11" value="11">
+      <label for="class11">11</label>
+    </div>
+    
+    <div class="radio-button">
+      <input type="radio" name="class" id="class12" value="12">
+      <label for="class12">12</label>
+    </div>
+    
+  </div>
+  
+  <div>
+    <label style="font-weight: bold; margin-right: 10px;">Board:</label>
+    <div style="margin-bottom: 10px;">
+        <br>
+        <input type="radio" id="cbse_icse" name="board" value="CBSE/ICSE" style="margin-right: 5px;">
+        <label for="cbse_icse" style="margin-right: 20px;">CBSE/ICSE</label>
+    </div>
+</div>
+
+    <div>
+      <input type="radio" id="state_board_other" name="board" value="State Board/Other">
+      <label for="state_board_other">State Board/Other</label>
+    </div>
+    <br>
+  </div>
+  
+  <div class="form-group">
+    <input type="tel" id="contact-number" name="contact_number" placeholder="Contact Number" required>
+  </div>
+  
+  <div class="form-group">
+    <button type="submit" value="submit" class="submit-button">Submit</button>
+  </div>
+</form>
